@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - Vellet Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .dashboard-hero {
+            background: linear-gradient(135deg, #ffb6c1 0%, #ffe4e9 100%);
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        .dashboard-hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .logout-btn {
+            background-color: white;
+            color: #ffb6c1;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .dashboard-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .dashboard-main {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 35px;
+        }
+        
+        .section-title {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #ffb6c1;
+            padding-bottom: 15px;
+        }
+        
+        .orders-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .orders-table thead {
+            background-color: #ffb6c1;
+            color: white;
+        }
+        
+        .orders-table th,
+        .orders-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-completed {
+            background-color: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="Logo.jpg" alt="Vellet Bakery Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="logo-text">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1>Vellet Bakery</h1>
+                        <p class="tagline">Sweet Moments, Baked with Love</p>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="customer-dashboard.html" class="active">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="dashboard-hero">
+        <h1>Welcome, Sara!</h1>
+        <p>Manage your orders</p>
+        <a href="register.html" class="logout-btn">Logout</a>
+    </section>
+
+    <div class="dashboard-content">
+        <main class="dashboard-main">
+            <h2 class="section-title">My Orders</h2>
+            
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Products</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#3001</td>
+                        <td>Oct 27, 2025</td>
+                        <td>Chocolate Chip Cookies</td>
+                        <td>12.500 OMR</td>
+                        <td><span class="status-badge status-pending">Pending</span></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>#3002</td>
+                        <td>Oct 26, 2025</td>
+                        <td>Fudgy Brownies</td>
+                        <td>8.000 OMR</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>#3003</td>
+                        <td>Oct 20, 2025</td>
+                        <td>Kinder Cookies</td>
+                        <td>15.600 OMR</td>
+                        <td><span class="status-badge status-completed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="text-align: center; margin-top: 30px;">
+                <a href="menu.html" style="color: #ffb6c1; font-weight: bold;">Order again →</a>
+            </p>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vellet Bakery</h3>
+                    <p>Homemade goodness delivered to your door</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: vellet@bakery.com</p>
+                    <p>Phone: +968 1234 5678</p>
+                    <p>Location: Muscat, Oman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vellet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

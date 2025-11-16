@@ -1,0 +1,279 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Vellet Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .checkout-hero {
+            background-color: #ffe4e9;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .checkout-hero h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        
+        .checkout-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .checkout-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+        
+        .checkout-form, .order-summary {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 35px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #ffb6c1;
+            padding-bottom: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+        }
+        
+        .required {
+            color: red;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .radio-option {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+        
+        .summary-row.total {
+            border-top: 2px solid #e0e0e0;
+            margin-top: 10px;
+            padding-top: 15px;
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #ffb6c1;
+        }
+        
+        .place-order-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+        
+        .place-order-btn:hover {
+            background-color: #ff9fb0;
+        }
+        
+        @media (max-width: 768px) {
+            .checkout-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="Logo.jpg" alt="Vellet Bakery Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="logo-text">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1>Vellet Bakery</h1>
+                        <p class="tagline">Sweet Moments, Baked with Love</p>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="register.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="checkout-hero">
+        <h1>Checkout</h1>
+        <p>Complete your order</p>
+    </section>
+
+    <div class="checkout-content">
+        <div class="checkout-container">
+            <div class="checkout-form">
+                <h2 class="section-title">Customer Information</h2>
+                
+                <form action="https://httpbin.org/get" method="GET">
+                    <div class="form-group">
+                        <label for="fullname">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Delivery Address <span class="required">*</span></label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city">City <span class="required">*</span></label>
+                        <select id="city" name="city" required>
+                            <option value="">-- Select --</option>
+                            <option value="muscat">Muscat</option>
+                            <option value="muttrah">Muttrah</option>
+                            <option value="bowshar">Bowshar</option>
+                            <option value="seeb">Seeb</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="deliverydate">Delivery Date <span class="required">*</span></label>
+                        <input type="date" id="deliverydate" name="deliverydate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Payment Method <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="cod" name="payment" value="cash" checked>
+                                <label for="cod">Cash on Delivery</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="bank" name="payment" value="bank">
+                                <label for="bank">Bank Transfer</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Order Notes</label>
+                        <textarea id="notes" name="notes"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="place-order-btn">Place Order</button>
+                </form>
+            </div>
+
+            <div class="order-summary">
+                <h2 class="section-title">Order Summary</h2>
+                
+                <div class="summary-row">
+                    <span>Chocolate Chip Cookies (x2)</span>
+                    <span>7.000 OMR</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span>Fudgy Brownies (x1)</span>
+                    <span>3.500 OMR</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span>Delivery:</span>
+                    <span>2.000 OMR</span>
+                </div>
+                
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span>12.500 OMR</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vellet Bakery</h3>
+                    <p>Homemade goodness delivered to your door</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: vellet@bakery.com</p>
+                    <p>Phone: +968 1234 5678</p>
+                    <p>Location: Muscat, Oman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vellet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

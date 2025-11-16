@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Vellet Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .menu-hero {
+            background-color: #ffe4e9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .menu-hero h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        
+        .menu-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .category-section {
+            margin-bottom: 60px;
+        }
+        
+        .category-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #ffb6c1;
+        }
+        
+        .category-header h2 {
+            font-size: 2em;
+            color: #333;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-item {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-image-box {
+            width: 100%;
+            height: 220px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .product-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-item h3 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .product-item p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .product-price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #ffb6c1;
+            margin-bottom: 15px;
+        }
+        
+        .add-to-cart-btn {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .add-to-cart-btn:hover {
+            background-color: #ff9fb0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="Logo.jpg" alt="Vellet Bakery Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="logo-text">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1>Vellet Bakery</h1>
+                        <p class="tagline">Sweet Moments, Baked with Love</p>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="register.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="menu-hero">
+        <h1>Our Menu</h1>
+        <p>Handcrafted cookies and brownies</p>
+    </section>
+
+    <div class="menu-content">
+        <section class="category-section">
+            <div class="category-header">
+                <h2>Cookies</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-item">
+                    <div class="product-image-box">
+                        <img src="chcolatechip.jpg" alt="Chocolate Chip Cookies">
+                    </div>
+                    <h3>Chocolate Chip Cookies</h3>
+                    <p>Box of 6</p>
+                    <p class="product-price">3.500 OMR</p>
+                    <a href="cart.html" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image-box">
+                        <img src="kinder.jpg" alt="Kinder Cookies">
+                    </div>
+                    <h3>Kinder Cookies</h3>
+                    <p>Box of 6</p>
+                    <p class="product-price">3.800 OMR</p>
+                    <a href="cart.html" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image-box">
+                        <img src="matcha.jpg" alt="Matcha Cookies">
+                    </div>
+                    <h3>Matcha Cookies</h3>
+                    <p>Box of 6</p>
+                    <p class="product-price">3.500 OMR</p>
+                    <a href="cart.html" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image-box">
+                        <img src="redvelvet.jpg" alt="Red Velvet Cookies">
+                    </div>
+                    <h3>Red Velvet Cookies</h3>
+                    <p>Box of 6</p>
+                    <p class="product-price">3.800 OMR</p>
+                    <a href="cart.html" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <div class="category-header">
+                <h2>Brownies</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-item">
+                    <div class="product-image-box">
+                        <img src="fudgy.jpg" alt="Fudgy Brownies">
+                    </div>
+                    <h3>Fudgy Brownies</h3>
+                    <p>Box of 9</p>
+                    <p class="product-price">3.500 OMR</p>
+                    <a href="cart.html" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image-box">
+                        <img src="nutella.jpg" alt="Nutella Brownies">
+                    </div>
+                    <h3>Nutella Brownies</h3>
+                    <p>Box of 9</p>
+                    <p class="product-price">4.000 OMR</p>
+                    <a href="cart.html" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image-box">
+                        <img src="carmel.jpg" alt="Caramel Brownies">
+                    </div>
+                    <h3>Salted Caramel Brownies</h3>
+                    <p>Box of 9</p>
+                    <p class="product-price">4.200 OMR</p>
+                    <a href="cart.html" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-image-box">
+                        <img src="oreo.jpg" alt="Oreo Brownies">
+                    </div>
+                    <h3>Oreo Brownies</h3>
+                    <p>Box of 9</p>
+                    <p class="product-price">4.000 OMR</p>
+                    <a href="cart.html" class="add-to-cart-btn">Add to Cart</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vellet Bakery</h3>
+                    <p>Homemade goodness delivered to your door</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: vellet@bakery.com</p>
+                    <p>Phone: +968 1234 5678</p>
+                    <p>Location: Muscat, Oman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vellet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

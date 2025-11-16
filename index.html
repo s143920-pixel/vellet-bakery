@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vellet Bakery - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero-section {
+            background-color: #f5f5f5;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .hero-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ffb6c1;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+        
+        .cta-button:hover {
+            background-color: #ff9fb0;
+        }
+        
+        .gallery-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .gallery-section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .gallery-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .gallery-caption {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .gallery-caption h3 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .about-preview {
+            background-color: #ffe4e9;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .about-preview h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .about-preview p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="Logo.jpg" alt="Vellet Bakery Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="logo-text">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1>Vellet Bakery</h1>
+                        <p class="tagline">Sweet Moments, Baked with Love</p>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="register.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <h1>Welcome to Vellet Bakery</h1>
+        <p>Handcrafted cookies and brownies made with love</p>
+        <a href="menu.html" class="cta-button">Shop Now</a>
+        <a href="about.html" class="cta-button">About Us</a>
+    </section>
+
+    <section class="gallery-section">
+        <h2>Our Delicious Creations</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="pic1.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Fresh Baked Daily</h3>
+                    <p>Made with premium ingredients</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="pic2.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Artisan Cookies</h3>
+                    <p>Handcrafted perfection</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="pic5.jpg" alt="Gallery Image 3">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Decadent Brownies</h3>
+                    <p>Rich and fudgy</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="pic6.jpg" alt="Gallery Image 4">
+                </div>
+                <div class="gallery-caption">
+                    <h3>Perfect for Any Occasion</h3>
+                    <p>Beautiful and delicious</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-preview">
+        <h2>About Vellet Bakery</h2>
+        <p>
+            Vellet Bakery began in a small home kitchen in Muscat, Oman. 
+            Every cookie and brownie is made with premium ingredients and love.
+        </p>
+        <a href="about.html" class="cta-button">Read Our Story</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vellet Bakery</h3>
+                    <p>Homemade goodness delivered to your door</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: vellet@bakery.com</p>
+                    <p>Phone: +968 1234 5678</p>
+                    <p>Location: Muscat, Oman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vellet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

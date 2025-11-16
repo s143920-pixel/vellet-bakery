@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Vellet Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .auth-hero {
+            background-color: #ffe4e9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .auth-hero h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        
+        .auth-content {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .auth-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .auth-box {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 40px;
+        }
+        
+        .auth-box h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        .required {
+            color: red;
+        }
+        
+        .auth-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .auth-button:hover {
+            background-color: #ff9fb0;
+        }
+        
+        .type-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .type-option {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .type-option input[type="radio"] {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .auth-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="Logo.jpg" alt="Vellet Bakery Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="logo-text">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1>Vellet Bakery</h1>
+                        <p class="tagline">Sweet Moments, Baked with Love</p>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="register.html" class="active">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="auth-hero">
+        <h1>Welcome</h1>
+        <p>Login or create an account</p>
+    </section>
+
+    <div class="auth-content">
+        <div class="auth-container">
+            <div class="auth-box">
+                <h2>Login</h2>
+                
+                <form action="customer-dashboard.html" method="GET">
+                    <div class="type-options">
+                        <div class="type-option">
+                            <input type="radio" id="login-customer" name="login-type" value="customer" checked>
+                            <label for="login-customer">Customer</label>
+                        </div>
+                        <div class="type-option">
+                            <input type="radio" id="login-admin" name="login-type" value="admin">
+                            <label for="login-admin">Admin</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-email">Email <span class="required">*</span></label>
+                        <input type="email" id="login-email" name="login-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password">Password <span class="required">*</span></label>
+                        <input type="password" id="login-password" name="login-password" required>
+                    </div>
+                    
+                    <button type="submit" class="auth-button">Login</button>
+                </form>
+            </div>
+
+            <div class="auth-box">
+                <h2>Register</h2>
+                
+                <form action="customer-dashboard.html" method="GET">
+                    <div class="type-options">
+                        <div class="type-option">
+                            <input type="radio" id="register-customer" name="account-type" value="customer" checked>
+                            <label for="register-customer">Customer</label>
+                        </div>
+                        <div class="type-option">
+                            <input type="radio" id="register-admin" name="account-type" value="admin">
+                            <label for="register-admin">Admin</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="register-name" name="register-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-email">Email <span class="required">*</span></label>
+                        <input type="email" id="register-email" name="register-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-phone">Phone <span class="required">*</span></label>
+                        <input type="tel" id="register-phone" name="register-phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-password">Password <span class="required">*</span></label>
+                        <input type="password" id="register-password" name="register-password" required>
+                    </div>
+                    
+                    <button type="submit" class="auth-button">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vellet Bakery</h3>
+                    <p>Homemade goodness delivered to your door</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: vellet@bakery.com</p>
+                    <p>Phone: +968 1234 5678</p>
+                    <p>Location: Muscat, Oman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vellet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

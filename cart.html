@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Vellet Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cart-hero {
+            background-color: #ffe4e9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .cart-hero h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        
+        .cart-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .cart-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .cart-items, .cart-summary {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        
+        .cart-items h2, .cart-summary h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #ffb6c1;
+            padding-bottom: 15px;
+        }
+        
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .cart-table thead {
+            background-color: #ffb6c1;
+            color: white;
+        }
+        
+        .cart-table th {
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .cart-table td {
+            padding: 20px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .price-cell {
+            font-weight: bold;
+            color: #ffb6c1;
+        }
+        
+        .remove-btn {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .continue-shopping {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            font-size: 1.1em;
+        }
+        
+        .summary-row.total {
+            border-top: 2px solid #e0e0e0;
+            margin-top: 15px;
+            padding-top: 20px;
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #ffb6c1;
+        }
+        
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #ffb6c1;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .checkout-btn:hover {
+            background-color: #ff9fb0;
+        }
+        
+        @media (max-width: 768px) {
+            .cart-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="Logo.jpg" alt="Vellet Bakery Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="logo-text">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1>Vellet Bakery</h1>
+                        <p class="tagline">Sweet Moments, Baked with Love</p>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="active">Cart</a></li>
+                    <li><a href="register.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cart-hero">
+        <h1>Shopping Cart</h1>
+        <p>Review your items</p>
+    </section>
+
+    <div class="cart-content">
+        <div class="cart-container">
+            <div class="cart-items">
+                <h2>Cart Items</h2>
+                
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chocolate Chip Cookies</td>
+                            <td class="price-cell">3.500 OMR</td>
+                            <td>2</td>
+                            <td class="price-cell">7.000 OMR</td>
+                            <td><button class="remove-btn">Remove</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Fudgy Brownies</td>
+                            <td class="price-cell">3.500 OMR</td>
+                            <td>1</td>
+                            <td class="price-cell">3.500 OMR</td>
+                            <td><button class="remove-btn">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <a href="menu.html" class="continue-shopping">← Continue Shopping</a>
+            </div>
+
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span>10.500 OMR</span>
+                </div>
+                
+                <div class="summary-row">
+                    <span>Delivery:</span>
+                    <span>2.000 OMR</span>
+                </div>
+                
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span>12.500 OMR</span>
+                </div>
+                
+                <a href="checkout.html" class="checkout-btn">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vellet Bakery</h3>
+                    <p>Homemade goodness delivered to your door</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: vellet@bakery.com</p>
+                    <p>Phone: +968 1234 5678</p>
+                    <p>Location: Muscat, Oman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vellet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Vellet Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-hero {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .contact-hero h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .contact-info, .contact-form-section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        
+        .contact-info h2, .contact-form-section h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .contact-item h3 {
+            color: #ffb6c1;
+            margin-bottom: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+        }
+        
+        .required {
+            color: red;
+        }
+        
+        .submit-button {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .submit-button:hover {
+            background-color: #ff9fb0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="Logo.jpg" alt="Vellet Bakery Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+                <div class="logo-text">
+                    <a href="index.html" style="text-decoration: none;">
+                        <h1>Vellet Bakery</h1>
+                        <p class="tagline">Sweet Moments, Baked with Love</p>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="register.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you</p>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>vellet@bakery.com</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>+968 1234 5678</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Location</h3>
+                <p>Muscat, Oman</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Hours</h3>
+                <p>Saturday - Thursday: 9 AM - 6 PM</p>
+                <p>Friday: Closed</p>
+            </div>
+        </div>
+
+        <div class="contact-form-section">
+            <h2>Send Message</h2>
+            <form action="https://httpbin.org/get" method="GET">
+                <div class="form-group">
+                    <label for="fullname">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject <span class="required">*</span></label>
+                    <select id="subject" name="subject" required>
+                        <option value="">-- Select --</option>
+                        <option value="general">General</option>
+                        <option value="order">Order Question</option>
+                        <option value="custom">Custom Order</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vellet Bakery</h3>
+                    <p>Homemade goodness delivered to your door</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: vellet@bakery.com</p>
+                    <p>Phone: +968 1234 5678</p>
+                    <p>Location: Muscat, Oman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vellet Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
